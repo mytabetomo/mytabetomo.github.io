@@ -1,0 +1,47 @@
+<turbo-frame id="overlay">
+  <div
+    id="overlay-content"
+    class="w-full absolute bottom-[9vh] left-[3vh] bg-transparent flex items-center justify-start z-0 opacity-0 translate-y-4"
+  >
+    <div
+      class="bg-[#FFFFFF] p-8 rounded-3xl h-auto w-3/5 max-w-xl relative text-center shadow-lg border-4 border-[#444444] bg-[url(/graphics/overbg/settings.png)] bg-cover"
+    >
+      <h2 id="settings-title" class="text-3xl font-bold mb-4">Settings</h2>
+
+      <div class="text-left grid grid-cols-2 gap-x-8 gap-y-4 text-base border-t border-gray-200 pt-3">
+        <!-- Pet Selection -->
+        <p class="font-bold">Choose your Pet:</p>
+        <select id="pet-select" class="border border-gray-300 rounded p-2 text-sm w-full">
+          <option value="cat">Cat</option>
+          <option value="bunny">Bunny</option>
+          <option value="slime">Slime</option>
+        </select>
+
+        <!-- Music Selection -->
+        <p class="font-bold">Choose Music:</p>
+        <select id="music-select" class="border border-gray-300 rounded p-2 text-sm w-full">
+          <option value="Default">Default</option>
+          <option value="Piano">Piano</option>
+          <option value="None">None</option>
+        </select>
+
+        <!-- Background Selection -->
+        <p class="font-bold">Choose Background:</p>
+        <select id="background-select" class="border border-gray-300 rounded p-2 text-sm w-full">
+          <option value="Blue Living Room">Blue Living Room</option>
+          <option value="Pink Bedroom">Pink Bedroom</option>
+          <option value="Grey Living Room">Grey Living Room</option>
+          <option value="Gamer's Room">Gamer's Room</option>
+          <option value="Medieval Castle">Medieval Castle</option>
+        </select>
+      </div>
+
+      <button
+        id="apply-settings-button"
+        class="bg-blue-500 text-white font-bold rounded-xl px-6 py-2 mt-8 hover:bg-blue-600 transition"
+      >
+        Apply Settings
+      </button>
+    </div>
+  </div>
+</turbo-frame>

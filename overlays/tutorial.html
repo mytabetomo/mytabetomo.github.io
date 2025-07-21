@@ -1,0 +1,437 @@
+<turbo-frame id="tutorial">
+  <link rel="stylesheet" href="index.css" />
+  <div id="tutorial-content-container" class="tutorial-message z-20 flex-col">
+    <!-- New Stage 1 (Blank) -->
+    <div
+      id="stage-1"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">Welcome to my Tabetomo!</p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Let's get you setup for your new health journey!
+      </p>
+      <button
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- New Stage 2 (Pet Selection) -->
+    <div
+      id="stage-2"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">Choose your Tabetomo:</p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Which pet is your favorite?
+      </p>
+      <div
+        id="pet-selection"
+        class="flex justify-center items-center gap-x-4 my-4"
+      >
+        <button
+          type="button"
+          data-pet="cat"
+          class="pet-choice p-2 bg-gray-200 rounded-2xl border-4 border-transparent transition-all duration-300"
+        >
+          <img
+            src="graphics/cat/cat_heart.png"
+            id="catbtn"
+            alt="A cute cat"
+            class="rounded-xl w-36 h-36 object-cover"
+          />
+        </button>
+        <button
+          type="button"
+          data-pet="bunny"
+          class="pet-choice p-2 bg-gray-200 rounded-2xl border-4 border-transparent transition-all duration-300"
+        >
+          <img
+            src="graphics/rabbit/rabbit_heart.png"
+            id="bunnybtn"
+            alt="A fluffy bunny"
+            class="rounded-xl w-36 h-36 object-cover"
+          />
+        </button>
+        <button
+          type="button"
+          data-pet="slime"
+          class="pet-choice p-2 bg-gray-200 rounded-2xl border-4 border-transparent transition-all duration-300"
+        >
+          <img
+            src="graphics/slime/slime_heart.png"
+            id="slimebtn"
+            alt="A happy slime"
+            class="rounded-xl w-36 h-36 object-cover"
+          />
+        </button>
+      </div>
+      <button
+        id="next-stage-2"
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- New Stage 3 (Blank) -->
+    <div
+      id="stage-3"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">Logging Your Meals</p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Cute! Now, the first step to using My Tabetomo, is to record your daily
+        meals.
+      </p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        You can select the "knife & fork" icon to add a meal!
+      </p>
+      <img src="graphics/food.png" alt="" class="w-[5rem]" />
+      <button
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- New Stage 4 (Blank) -->
+    <div
+      id="stage-4"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">Reviewing your Meals</p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Want to check what you've eaten so far for the day?
+      </p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        You can select the "log" icon to view your meal history!
+      </p>
+      <img src="graphics/log.png" alt="" class="w-[5rem]" />
+      <button
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- New Stage 5 (Blank) -->
+    <div
+      id="stage-5"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">
+        Checking your Nutrient Progress
+      </p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        You can also check how you're doing on completing your nutrient goals!
+      </p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        You can select the "heart" icon to check your progress!
+      </p>
+      <img src="graphics/heart.png" alt="" class="w-[5rem]" />
+      <button
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- New Stage 6 (Blank) -->
+    <div
+      id="stage-6"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">Change your Settings</p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Want to customize your experience?
+      </p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        You can select the "settings" icon to adjust your room settings!
+      </p>
+      <img src="graphics/settings.png" alt="" class="w-[5rem]" />
+      <button
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- New Stage 7 (Blank) -->
+    <div
+      id="stage-7"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">Personalizing your Goals</p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Now we're going to calculate your personalized nutrient goals.
+      </p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Please answer the following questions!
+      </p>
+      <button
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- New Stage 8 (Blank) -->
+    <div
+      id="stage-8"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="text-[2rem] font-semibold mb-2">Need to change your data?</p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        Dont worry, if you made a mistake or want to see this tutorial again,
+      </p>
+      <p class="text-[1.5rem] mb-2 animated-text">
+        just select the "user" icon to re-do the setup!
+      </p>
+      <img src="graphics/user.png" alt="" class="w-[5rem]" />
+      <button
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 py-2 mt-5 hover:brightness-110 transition"
+      >
+        Begin Questions
+      </button>
+    </div>
+
+    <!-- Old Stage 1, now Stage 9 -->
+    <div
+      id="stage-9"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <div class="flex justify-center items-center gap-x-3 relative">
+        <p class="text-[2rem] font-semibold mb-2 animated-text">
+          Select your biological sex:
+        </p>
+      </div>
+      <div id="gender">
+        <button
+          type="button"
+          data-value="1"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 mr-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Male
+        </button>
+        <button
+          type="button"
+          data-value="2"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Female
+        </button>
+      </div>
+      <button
+        id="next-stage-9"
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 text-[1.5rem] py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- Old Stage 2, now Stage 10 -->
+    <div
+      id="stage-10"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <label
+        for="age"
+        class="block text-[2rem] mb-3 font-semibold animated-text"
+        >Enter your age:</label
+      >
+      <input
+        type="number"
+        id="age"
+        class="border p-2 rounded-md w-full max-w-sm focus:ring-blue-500 focus:border-blue-500"
+      />
+      <button
+        id="next-stage-10"
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 text-[1.5rem] py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- Old Stage 3, now Stage 11 -->
+    <div
+      id="stage-11"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <p class="block text-[2rem] mb-2 font-semibold animated-text">
+        Select Height Unit:
+      </p>
+      <div
+        class="flex justify-center space-x-4 mb-4"
+        id="height-unit-selection"
+      >
+        <button
+          type="button"
+          data-unit="cm"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 bg-blue-500 text-white text-[1.5rem] rounded-md hover:bg-blue-600 transition-colors selected-unit-button"
+        >
+          CM
+        </button>
+        <button
+          type="button"
+          data-unit="ft"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors"
+        >
+          FT
+        </button>
+      </div>
+      <div id="cm-input-container">
+        <label
+          for="height"
+          class="animated-text block text-[2rem] mb-3 font-semibold"
+          >Enter your height (cm):</label
+        >
+        <input
+          type="number"
+          id="height"
+          class="border p-2 rounded-md w-full max-w-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <div id="ft-input-container" class="hidden">
+        <label for="ft" class="block text-[2rem] mb-3 font-semibold"
+          >Enter your height (feet):</label
+        >
+        <input
+          type="number"
+          id="ft"
+          class="border p-2 rounded-md w-full max-w-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <button
+        id="next-stage-11"
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 text-[1.5rem] py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- Old Stage 4, now Stage 12 -->
+    <div
+      id="stage-12"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl"
+    >
+      <label
+        for="weight"
+        class="block text-[2rem] mb-3 font-semibold animated-text"
+        >Enter your weight (kg):</label
+      >
+      <input
+        type="number"
+        id="weight"
+        class="border p-2 rounded-md w-full max-w-sm focus:ring-blue-500 focus:border-blue-500"
+      />
+      <button
+        id="next-stage-12"
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 text-[1.5rem] py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- Old Stage 5, now Stage 13 -->
+    <div
+      id="stage-13"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl text-center"
+    >
+      <p class="text-[2rem] font-semibold mb-2 animated-text">
+        How often do you exercise?
+      </p>
+      <div id="exercise-level">
+        <button
+          type="button"
+          data-value="1"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 mr-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Rarely
+        </button>
+        <button
+          type="button"
+          data-value="2"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 mr-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Occasionally
+        </button>
+        <button
+          type="button"
+          data-value="3"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Frequently
+        </button>
+      </div>
+      <button
+        id="next-stage-13"
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 text-[1.5rem] py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- Old Stage 6, now Stage 14 -->
+    <div
+      id="stage-14"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl text-center"
+    >
+      <p class="text-[2rem] font-semibold mb-2 animated-text">
+        Select a weight goal:
+      </p>
+      <div id="selection">
+        <button
+          type="button"
+          data-value="1"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 mr-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Lose weight
+        </button>
+        <button
+          type="button"
+          data-value="2"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 mr-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Maintain weight
+        </button>
+        <button
+          type="button"
+          data-value="3"
+          class="px-6 my-3 mx-4 text-[1.5rem] py-2 bg-gray-200 rounded-md transition-colors"
+        >
+          Gain weight
+        </button>
+      </div>
+      <button
+        id="next-stage-14"
+        class="launch bg-blue-500 text-white text-[1.5rem] font-bold rounded-xl px-6 my-3 mx-4 text-[1.5rem] py-2 mt-5 hover:brightness-110 transition"
+      >
+        Next
+      </button>
+    </div>
+
+    <!-- Old Stage 7, now Stage 15 -->
+    <div
+      id="stage-15"
+      class="hidden w-auto h-auto bg-white flex flex-col items-center justify-center px-[3rem] py-[1rem] shadow-md rounded-3xl text-center"
+    >
+      <div id="results">
+        <h2 class="text-[2rem] font-bold mb-4">Setup Complete!</h2>
+        <p class="text-[1.5rem] animated-text">
+          Check the "user" icon to see your Calorie goals!
+        </p>
+        <p class="text-[1.5rem] animated-text">
+          Click on your Tabetomo to see what they have to say! Have fun!
+        </p>
+      </div>
+      <button
+        id="go-to-game"
+        class="launch bg-green-500 text-white text-[1.5rem] font-bold rounded-xl px-8 py-3 mt-6 hover:bg-green-600 shadow-lg text-[2rem] transition"
+      >
+        Start Game!
+      </button>
+    </div>
+  </div>
+</turbo-frame>

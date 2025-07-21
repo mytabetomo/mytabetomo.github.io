@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tabetomo!</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="icon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@8/dist/pixi.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.4/dist/turbo.es2017-umd.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics-compat.js"></script>
+  </head>
+
+  <body
+    class="pt-48 lg:pt-44 min-h-screen flex flex-col justify-between"
+    style="background-image: url('graphics/bg-main.jpeg')"
+  >
+    <div
+      id="main-header"
+      class="w-full bg-[#333333] shadow-md fixed top-0 left-0 flex flex-col xl:flex-row justify-center items-center z-10 hidden select-none bg-opacity-80"
+    >
+      <div id="logo-container" class="">
+        <img
+          id="logo"
+          src="graphics/logo-compress.png"
+          alt="Logo"
+          class="w-[20rem] px-3"
+        />
+      </div>
+
+      <div
+        class="w-full sm:w-1/3 flex justify-center items-center px-8 py-1 rounded-xl"
+      >
+        <nav>
+          <ul
+            class="justify-between flex px-2 sm:px-5 sm:gap-[5rem] gap-[3rem] text-white text-[2rem] cherry-bomb-one-regular"
+          >
+            <li class="hover:scale-110 duration-150">
+              <a href="index.html" data-turbo-frame="page">Play</a>
+            </li>
+            <li class="hover:scale-110 duration-150">
+              <a href="about.html" data-turbo-frame="page">About</a>
+            </li>
+            <li class="hover:scale-110 duration-150">
+              <a href="contact.html" data-turbo-frame="page">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div
+      id="click-screen"
+      class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 cursor-pointer select-none"
+    >
+      <div
+        id="click-screen-inner"
+        class="flex flex-col items-center justify-center hover:scale-110 ease-out duration-300"
+      >
+        <div id="logo2-container" class="">
+          <img
+            id="logo2"
+            src="graphics/logo-compress.png"
+            alt="Logo"
+            class="w-[20rem]"
+          />
+        </div>
+        <p
+          class="text-center px-3 relative text-white text-[2rem] sm:text-[4rem] font-semibold cherry-bomb-one-regular justify-center"
+        >
+          Click to Enter!
+        </p>
+      </div>
+    </div>
+
+    <turbo-frame id="page" class="hidden">
+      <div class="flex mt-5 xl:mt-0 items-center justify-center">
+        <div id="login-box" class="login-box">
+          <form id="login-form">
+            <h2 class="text-center mb-4 text-white font-bold text-3xl">
+              Welcome to Tabetomo!
+            </h2>
+            <input
+              type="email"
+              id="login-email"
+              placeholder="Email"
+              class="input-field"
+              required
+            />
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Password"
+              class="input-field"
+              required
+            />
+
+            <div
+              id="login-error"
+              class="text-red-500 text-center mb-4 font-bold"
+            ></div>
+
+            <button id="login-btn" type="submit" class="login-button">
+              Login
+            </button>
+          </form>
+
+          <button id="create-btn" class="login2-button">
+            Create a Tabetomo Account!
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="info"
+        class="mx-auto max-w-[50rem] w-full bg-white px-8 py-5 mt-16 shadow-md rounded-xl text-center bg-opacity-90"
+      >
+        <h1 class="font-bold text-[2.5vh]">What is "My Tabetomo?"</h1>
+        <p class="text-black leading-loose text-[1.7vh] py-5">
+          "My Tabetomo!" is a web app that analyses the food you eat to help you
+          maintain a healthier lifestyle! <br />
+          Create a virtual pet, called a "tabetomo", that you'll take care of
+          through the foods you eat! Try to feed your tabetomo (and yourself) a
+          healthy well-balanced diet!
+        </p>
+        <br />
+        <h1 class="font-bold text-[2.5vh]">
+          Developed by: Liam Persad, Soraha Ebara and Nathaniel Davis
+        </h1>
+        <p class="text-black leading-loose text-[1.7vh] py-5">
+          This project was developed as a Final Project for "CIS-3308 - Web
+          Application Programming" class. <br />
+        </p>
+
+        <h1 class="font-bold text-[3vh]">DISCLAIMER:</h1>
+        <p class="text-black leading-loose text-[1.7vh] py-5">
+          The information in "My Tabetomo" is for informational reference and
+          educational purposes only. It is not intended as a substitute for
+          professional medical or nutritional advice, diagnosis, or treatment.
+          Always consult a qualified healthcare provider with any health
+          concerns. Use of this app is at your own risk.
+        </p>
+      </div>
+    </turbo-frame>
+    <div
+      id="main-footer"
+      class="w-full bg-[#333333] shadow-md relative bottom-0 left-0 mt-5 pb-5 flex justify-center items-center z-10 select-none hidden"
+    >
+      <div
+        class="w-full sm:w-1/3 flex justify-center items-center px-8 py-1 rounded-xl"
+      >
+        <nav>
+          <ul
+            class="items-center justify-between flex px-2 sm:px-5 sm:gap-[5rem] gap-[2rem] text-white text-[2rem] cherry-bomb-one-regular"
+          >
+            <li class="hover:scale-110 duration-150">
+              <a href="index.html" data-turbo-frame="page">Play</a>
+            </li>
+            <li class="hover:scale-110 duration-150">
+              <a href="about.html" data-turbo-frame="page">About</a>
+            </li>
+            <li class="hover:scale-110 duration-150">
+              <a href="contact.html" data-turbo-frame="page">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+  <script src="javascript/firebase.js"></script>
+  <script src="javascript/index.js"></script>
+</html>

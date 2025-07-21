@@ -1,0 +1,65 @@
+<turbo-frame id="overlay">
+  <div
+    id="overlay-content"
+    class="w-full absolute bottom-[9vh] right-[3vh] bg-transparent flex items-center justify-end z-0 opacity-0 translate-y-4"
+  >
+    <div
+      class="bg-[#FFFFFF] p-8 rounded-3xl h-auto w-3/5 max-w-xl relative text-center shadow-lg border-4 border-[#444444] bg-[url(/graphics/overbg/user.png)] bg-cover"
+    >
+      <h2 id="profile-title" class="text-3xl font-bold mb-4">Your Profile</h2>
+
+      <div class="text-left grid grid-cols-2 gap-x-8 gap-y-2 text-base border-t border-gray-200 pt-3">
+        <p class="font-bold">Biological Sex:</p>
+        <span id="user-gender-display" class="font-semibold">Loading...</span>
+
+        <p class="font-bold">Age:</p>
+        <span id="user-age-display" class="font-semibold">Loading...</span>
+
+        <p class="font-bold">Height:</p>
+        <span id="user-height-display" class="font-semibold">Loading...</span>
+
+        <p class="font-bold">Weight:</p>
+        <span id="user-weight-display" class="font-semibold">Loading...</span>
+
+        <p class="font-bold">Activity Level:</p>
+        <span id="user-activity-display" class="font-semibold">Loading...</span>
+
+        <p class="font-bold">Weight Goal:</p>
+        <span id="user-goal-display" class="font-semibold">Loading...</span>
+
+        <p class="font-bold">Join Date:</p>
+        <span id="user-join-date-display" class="font-semibold">Loading...</span>
+      </div>
+
+      <div class="mt-6 border-t-2 border-gray-200 pt-4">
+        <div class="flex items-center justify-center space-x-4 mb-4">
+          <div>
+            <p class="font-bold text-xl">Daily Calorie Target:</p>
+            <p
+              id="user-calories-display"
+              class="text-2xl font-bold text-white rounded-full px-5 py-2 bg-[#31ce78] inline-block"
+            >
+              -- kcal
+            </p>
+          </div>
+          <div>
+            <p class="font-bold text-xl">Streak:</p>
+            <p
+              id="user-streak-display"
+              class="text-2xl font-bold text-white rounded-full px-5 py-2 bg-[#ff6f00] inline-block"
+            >
+              -- days
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        id="edit-profile-button"
+        class="bg-blue-500 text-white font-bold rounded-xl px-6 py-2 mt-5 hover:bg-blue-600 transition"
+      >
+        Re-do Setup
+      </button>
+    </div>
+  </div>
+</turbo-frame>

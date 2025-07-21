@@ -1,0 +1,53 @@
+<turbo-frame id="page">
+  <div class="flex items-center justify-center mb-40">
+    <div id="login-box" class="login-box">
+      <!-- Sign-Up Form -->
+      <form id="signup-form">
+        <h2 class="text-center mb-4 text-white text-2xl">
+          Create your Tabetomo Account!
+        </h2>
+
+        <input
+          type="text"
+          id="nickname"
+          placeholder="Nickname"
+          class="input-field"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          class="input-field"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          class="input-field"
+          required
+        />
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Confirm Password"
+          class="input-field mb-6"
+          required
+        />
+
+        <div
+          id="signup-error"
+          class="text-red-500 text-center mb-4 font-bold"
+        ></div>
+
+        <button type="submit" class="login-button">Sign Up</button>
+      </form>
+
+      <button id="login-rtr-btn" class="login2-button">
+        Already have a Tabetomo?
+      </button>
+      <!-- Login / Signup Form END -->
+    </div>
+  </div>
+</turbo-frame>

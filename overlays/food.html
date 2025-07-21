@@ -1,0 +1,58 @@
+<turbo-frame id="overlay">
+  <div
+    id="overlay-content"
+    class="w-full absolute bottom-[9vh] left-0 bg-transparent flex items-center justify-center z-0 opacity-0 translate-y-4"
+  >
+    <div
+      class="bg-white font-sans p-8 rounded-2xl min-h-100 w-3/5 max-w-xl relative text-center shadow-lg flex flex-col border-4 border-[#fbb03c] bg-[url(/graphics/overbg/food.png)] bg-cover"
+    >
+      <div class="max-w-4xl mx-auto p-0 flex flex-col flex-grow">
+        <h1 class="text-3xl font-bold text-gray-900 text-center">
+          USDA Food Nutrition Search
+        </h1>
+        <p class="text-sm mb-4">
+          Note: Nutrition data represents general estimates only; actual
+          nutrient content may vary.
+        </p>
+        <div class="flex gap-4 mb-8">
+          <input
+            type="text"
+            id="foodSearchInput"
+            placeholder="Search for food here..."
+            class="flex-grow p-3 border border-gray-300 rounded-md text-base focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+          <button
+            id="searchButton"
+            class="px-5 py-2 bg-green-600 text-white rounded-md cursor-pointer text-base hover:bg-green-700 transition duration-300"
+          >
+            Search
+          </button>
+        </div>
+        <div
+          id="results"
+          class="border-t border-gray-200 pt-5 overflow-y-auto max-h-64"
+        ></div>
+
+        <div
+          id="currentMealSection"
+          class="overflow-y-auto mt-8 pt-5 border-t border-gray-200 max-h-40"
+        >
+          <h2 class="text-xl font-semibold text-gray-800 mb-4 text-left">
+            Your Current Meal:
+          </h2>
+          <ul id="currentMealList" class="list-none p-0 text-left">
+            <li id="noMealItems" class="text-gray-500 text-sm">
+              No items added to your meal yet.
+            </li>
+          </ul>
+        </div>
+        <button
+          id="submitMealButton"
+          class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md cursor-pointer text-base hover:bg-blue-700 transition duration-300 w-full"
+        >
+          Submit Meal
+        </button>
+      </div>
+    </div>
+  </div>
+</turbo-frame>

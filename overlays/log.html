@@ -1,0 +1,18 @@
+<turbo-frame id="overlay">
+  <div
+    id="overlay-content"
+    class="w-full absolute bottom-[9vh] left-0 bg-transparent flex items-center justify-center z-0 opacity-0 translate-y-4"
+  >
+    <div
+      class="bg-white font-sans p-8 rounded-2xl min-h-100 w-3/5 max-w-xl relative text-center shadow-lg flex flex-col border-4 border-[#ed2079] bg-[url(/graphics/overbg/heart.png)] bg-cover"
+    >
+      <div class="max-w-4xl mx-auto p-0 flex flex-col flex-grow">
+        <h1 class="text-3xl font-bold text-gray-900 text-center">
+          Today's Nutrient Progress
+        </h1>
+      </div>
+      <!-- Changed to a grid layout for 3x2 display -->
+      <div id="progressBars" class="mt-3 pt-3 border-t border-gray-200 grid grid-cols-2 gap-4 justify-items-center"></div>
+    </div>
+  </div>
+</turbo-frame>
